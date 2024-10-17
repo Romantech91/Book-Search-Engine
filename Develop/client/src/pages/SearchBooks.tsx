@@ -17,21 +17,21 @@ import type { GoogleAPIBook } from '../models/GoogleAPIBook';
 // Import Apollo Client hooks and mutation
 import { useMutation } from '@apollo/client';
 import { SAVE_BOOK } from '../utils/mutations.ts';
-import { searchGoogleBooks } from '../utils/API';  // Keeping your original function here
+import { searchGoogleBooks } from '../utils/API';  
 
 const SearchBooks = () => {
   const [searchedBooks, setSearchedBooks] = useState<Book[]>([]);
   const [searchInput, setSearchInput] = useState('');
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
-  // Set up Apollo mutation
+  // Sets up Apollo mutation
   const [saveBook] = useMutation(SAVE_BOOK);
 
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
 
-  // Your original function for searching Google Books
+  
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -40,7 +40,7 @@ const SearchBooks = () => {
     }
 
     try {
-      const response = await searchGoogleBooks(searchInput); // This remains the same
+      const response = await searchGoogleBooks(searchInput); 
 
       if (!response.ok) {
         throw new Error('something went wrong!');
@@ -73,7 +73,7 @@ const SearchBooks = () => {
     }
 
     try {
-      // Use Apollo's useMutation to save the book via the GraphQL API
+      // Using Apollo's useMutation to save the book via the GraphQL API
       await saveBook({
         variables: {
           bookId: bookToSave.bookId,
