@@ -63,7 +63,6 @@ const SignupForm = ({}: { handleModalClose: () => void }) => {
 
   return (
     <>
-      {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant="danger">
           Something went wrong with your signup!
