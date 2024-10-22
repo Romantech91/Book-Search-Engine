@@ -147,10 +147,10 @@ Make sure to test:
 
 ## Deployment
 
-This application is deployed on **Render** and uses **MongoDB Atlas** as the database.
+This application is deployed on **Render**.
 
-- **Deployed Application**: [Link to Deployed App](#)
-- **GraphQL Playground**: [Link to GraphQL Playground](#)
+- **Deployed Application**: [Link to Deployed App](https://book-search-engine-pp0y.onrender.com)
+
 
 ## License
 
